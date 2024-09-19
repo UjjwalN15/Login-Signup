@@ -103,32 +103,29 @@ a:hover{
     content: "";
     position: absolute;
     top: 0;
-    width: 25%;
+    width: 20%;
     height: 100%;
     background-color: red;
     z-index: -1;
     animation: slideIn 8s ease-in infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    border-radius: 5%;
 }
 
 @keyframes slideIn {
     0% {
-        left: -10%;
+        left: -3%;
     }
     25% {
         left: 50%;
     }
     50%{
-        left: 90%;
+        left: 83%;
     }
     75% {
         left: 50%;
     }
     100%{
-        left: -10%;
+        left: -3%;
     }
 }
 
@@ -147,12 +144,51 @@ a:hover{
         margin: 10%;
         border-radius: 20px;
     }
-    .sliding-box{
+    .sliding-box-login, .sliding-box-signup {
         font-size: 2rem;
         margin-top: 5%;
         width: 100%;
     }
-    @keyframes slideIn {
+    .sliding-box-login::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background-color: red;
+        z-index: -1;
+        animation: slideIn-login 8s ease-in infinite;
+        border-radius: 5%;
+    }
+    @keyframes slideIn-login {
+        0% {
+            left: 11%;
+        }
+        25% {
+            left: 50%;
+        }
+        50%{
+            left: 70%;
+        }
+        75% {
+            left: 50%;
+        }
+        100%{
+            left: 11%;
+        }
+    }
+    .sliding-box-signup::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background-color: red;
+        z-index: -1;
+        animation: slideIn-signup 8s ease-in infinite;
+        border-radius: 5%;
+    }
+    @keyframes slideIn-signup {
         0% {
             left: 0%;
         }
@@ -160,7 +196,7 @@ a:hover{
             left: 50%;
         }
         50%{
-            left: 75%;
+            left: 80%;
         }
         75% {
             left: 50%;
