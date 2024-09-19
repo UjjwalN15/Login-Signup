@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"content="A simple and secure login and signup website for users to create accounts and access personalized features.">
+    <title>Login Signup</title>
+</head>
+<body>
+    <div class="container flex-center">
+        <div class="loginbox flex-center">
+            <h1 class="pointer">Login</h1>
+            <div class="sliding-box ">Welcome Back to the HELL</div>
+            <form action="/login" method="POST">
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="submit" id="submit" value="Login">
+            </form>
+            <a href="/forgot-password" class="link pointer">Forgot Password?</a>
+            <a href="/signup" class="link pointer">Create an Account</a>
+        </div>
+        <div class="signupbox flex-center">
+            <h1 class="pointer">Sign Up</h1>
+            <div class="sliding-box ">Welcome to the HELL</div>
+            <form action="/login" method="POST">
+                <input type="email" name="username" id="username" placeholder="example@gmail.com" required>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Confirm Password" required>
+                <input type="submit" id="submit" value="Sign Up">
+            </form>
+            <p class="already pointer">Already Have an account? <a href="#">Login</a></p>
+            <div class="sliding-box ">Signup at your own risk</div>
+        </div>
+    </div>
+</body>
+</html>

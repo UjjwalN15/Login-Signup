@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.pointer{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    text-decoration: underline;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    gap: 10%;
+}
+.loginbox{
+    height: max-content;
+    width: 70%;
+    flex-basis: 40%;
+    flex-direction: column;
+}
+.loginbox>h1, .signupbox>h1{
+    color: red;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 1%;
+    font-size: 5rem;
+}
+.loginbox>form, .signupbox>form{
+    display: flex;
+    flex-direction: column;
+}
+
+#username, #password{
+    height: max-content;
+    background-color: black;
+    border: none;
+    border-bottom: 0.1rem solid red;
+    border-left: 0.1rem solid red;
+    /* box-shadow: 0px 5px 5px red; */
+    margin-top: 10%;
+    border-radius: 10%;
+    padding: 5%;
+}
+.link, .already{
+    color: red;
+    font-size: 1.5rem;
+    padding-top: 3%;
+    text-decoration: none;
+}
+#submit{
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: large;
+    font-weight: 900;
+    font-family: "Creepster", system-ui;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    border-radius: 30%;
+    cursor: pointer;
+    margin-top: 10%;
+}
+#submit:hover{
+    text-decoration: underline;
+}
+.signupbox{
+    height: max-content;
+    width: 70%;
+    flex-basis: 40%;
+    flex-direction: column;
+}
+
+/* Sliding red box behind text */
+.sliding-box {
+    position: relative;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin: 20px;
+    z-index: 1;
+}
+
+.sliding-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+    animation: slideIn 8s ease-in infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+@keyframes slideIn {
+    0% {
+        left: -10%;
+    }
+    25% {
+        left: 50%;
+    }
+    50%{
+        left: 90%;
+    }
+    75% {
+        left: 50%;
+    }
+    100%{
+        left: -10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden
+    }
+    .container{
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loginbox, .signupbox{
+        height: 100vh;
+        width: 70%;
+        margin: 10%;
+        border-radius: 20px;
+    }
+    .sliding-box{
+        font-size: 2rem;
+        margin-top: 5%;
+        width: 100%;
+    }
+    @keyframes slideIn {
+        0% {
+            left: 0%;
+        }
+        25% {
+            left: 50%;
+        }
+        50%{
+            left: 75%;
+        }
+        75% {
+            left: 50%;
+        }
+        100%{
+            left: 0%;
+        }
+    }
+}
